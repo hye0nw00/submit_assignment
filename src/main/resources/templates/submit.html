@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${title} + ' 과제 제출'"></h1>
+<form method="post" action="/submit" enctype="multipart/form-data">
+    <input type="hidden" name="articleId" th:value="${id}">
+    <label>
+         학번 :
+        <input type="text" placeholder="학번을 입력해주세요." name="studentId" autocomplete='off' required>
+    </label>
+    <br>
+    <label>
+        성명 :
+        <input type="text" placeholder="성명을 입력해주세요." name="studentName" autocomplete='off' required>
+    </label>
+    <br>
+    <label>
+        과제 파일 :
+        <input type="file" name="file" required>
+    </label>
+    <br>
+    <input type="submit" value="제출" >
+</form>
+</body>
+</html>

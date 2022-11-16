@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>신규과제등록</h1>
+    <form method="post" action="/write">
+        <label>
+            제목 :
+            <input type="text" placeholder="제목을 입력해주세요." name="title" autocomplete='off' required>
+        </label>
+        <br>
+        <label>
+            설명 :
+            <textarea rows="10" name="content"
+                      placeholder="내용을 입력해주세요" autocomplete='off' required
+            ></textarea>
+        </label>
+        <br>
+        <label>
+            과제 시작 일자 :
+            <input type="date" autocomplete='off' name="startdate" required>
+        </label>
+        <br>
+        <label>
+            과제 종료 일자 :
+            <input type="date" autocomplete='off' name="enddate" required>
+        </label>
+        <br>
+        <input type="submit" value="등록" >
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>과제 조회</h1>
+<h3 th:text="'제목 : ' + ${title}">제목</h3>
+<h4>설명 : </h4>
+<h4 th:text="${content}">설명</h4><br>
+<h4 th:text="'과제 수행 기간 :' + ${start} + ' ~ ' + ${end}">기간</h4><br>
+<a th:href="@{/submit(id=${id})}">과제 제출</a> | <a th:href="@{/check(id=${id})}">과제 확인</a>
+</body>
+</html>

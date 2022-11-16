@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>과제 목록</h1>
+    <ul>
+        <li th:each="article : ${articles}">
+            <a th:text="${article.title}"
+               th:href="@{/show(id=${article.id})}"></a>
+        </li>
+    </ul>
+    <a href="/write">신규과제등록</a>
+</body>
+</html>
